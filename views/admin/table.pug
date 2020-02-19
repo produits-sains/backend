@@ -1,0 +1,13 @@
+h2= part.name
+  div(class="table-responsive")
+  table(class="table table-striped table-sm")
+    thead
+      tr
+        each header in part.headers
+          th= header
+    tbody
+      each elm in part.data
+        tr
+          each header in part.headers
+            td
+              pre= elm[header]
